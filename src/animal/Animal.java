@@ -4,6 +4,7 @@ public class Animal
 {
     public static final String[] asexualAnimals = {"flatworm","jellyfish", "sea anemone", "coral"};
 
+    //The name you give to your pet, example: Garfield
     public String name;
     protected String scientificName;
 
@@ -11,6 +12,7 @@ public class Animal
     public Animal(String name)
     {
         this.name = name;
+        this.scientificName = "";
     }
 
     //scientificName getter
@@ -27,7 +29,7 @@ public class Animal
 
     public boolean isAsexual()
     {
-        String lowerName = name.toLowerCase();
+        String lowerName = scientificName.toLowerCase();
         return java.util.Arrays.asList(asexualAnimals).indexOf(lowerName) != -1;
     }
 }

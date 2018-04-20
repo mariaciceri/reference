@@ -1,20 +1,18 @@
 package com.company;
 
-import animal.Animal;
+import animal.Cat;
+import animal.Mammal.FurQuantity;
 
 public class Main
 {
     public static void main(String[] args)
     {
-        Animal a = new Animal("cOrAl");
+        Cat garfield = new Cat("Garfield");
+        garfield.setUp(FurQuantity.MEDIUM, "orange", 4, "meow", "felis catus");
 
-        if (a.isAsexual())
-        {
-            System.out.println("O animal " + a.name + " é assexuado.");
-        }
-        else
-        {
-            System.out.println("O animal " + a.name + " não é assexuado.");
-        }
+        System.out.println(garfield.toString());
+        garfield.speak();
+        garfield.hunt();
+
     }
 }
